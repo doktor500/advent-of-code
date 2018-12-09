@@ -1,5 +1,5 @@
 defmodule FrequencyCalculator do
-  def calculate(frequencies) do
+  def calculate_final(frequencies) do
     frequencies
     |> Enum.map(&to_number(&1))
     |> Enum.sum

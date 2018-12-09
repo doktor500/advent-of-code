@@ -20,7 +20,7 @@ defmodule FrequencyCalculator do
     frequency_metadata
     |> Map.put(:seen, [current_frequency | frequency_metadata.seen])
     |> Map.put(:remaining, tail)
-    |> Map.put(:found, Enum.member?(frequency_metadata.seen, current_frequency))
+    |> Map.put(:found, current_frequency in frequency_metadata.seen)
     |> calculate_first_repeated_frequency
   end
 

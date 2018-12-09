@@ -5,11 +5,6 @@ defmodule FrequencyCalculator do
     |> Enum.sum
   end
 
-  defp to_number("+" <> value) do
-    String.to_integer(value)
-  end
-
-  defp to_number("-" <> value) do
-    String.to_integer(value) * - 1
-  end
+  defp to_number("+" <> value), do: String.to_integer(value)
+  defp to_number("-" <> value), do: String.to_integer(value) * - 1
 end

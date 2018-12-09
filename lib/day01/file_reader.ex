@@ -3,6 +3,5 @@ defmodule FileReader do
     file_name
     |> File.stream!
     |> Stream.map(&String.trim/1)
-    |> Enum.to_list
   end
 end
